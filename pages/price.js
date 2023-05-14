@@ -4,6 +4,8 @@ import Link from "next/link";
 import '../app/globals.css'
 import Price from '../app/components/price-card'
 import Header from "@/app/components/header";
+import { Suspense } from "react";
+import Loading from "../app/loading";
 
 export default function Projects({projects}) {
     return (
@@ -13,6 +15,8 @@ export default function Projects({projects}) {
                 title='호스팅 가격표'
                 subtitle='호스팅 구매시 이용약관 / 주의사항에 동의한걸로 간주됩니다.'
             />
+
+            <Suspense fallback={<div>Loading..</div>}>
             <section className='flex items-center justify-center mb-10 ci-on'>
                 <div className='container mx-auto'>
                     <h1 className='text-3xl font-bold mb-8 ml-4'>가상서버 가격표</h1>
@@ -32,6 +36,7 @@ export default function Projects({projects}) {
                     </div>
                 </div>
             </section>
+            </Suspense>
         </>
     );
 }
