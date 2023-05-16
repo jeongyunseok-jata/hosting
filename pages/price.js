@@ -4,22 +4,20 @@ import Link from "next/link";
 import '../app/globals.css'
 import Price from '../app/components/price-card'
 import Header from "@/app/components/header";
-import { Suspense } from "react";
-import Loading from "../app/loading";
+import Footer from '../app/components/footer'
 
 export default function Projects({projects}) {
     return (
         <>
             <Header
-                class='header-bg'
+                class_name='header-bg'
                 title='호스팅 가격표'
                 subtitle='호스팅 구매시 이용약관 / 주의사항에 동의한걸로 간주됩니다.'
             />
 
-            <Suspense fallback={<div>Loading..</div>}>
             <section className='flex items-center justify-center mb-10 ci-on'>
                 <div className='container mx-auto'>
-                    <h1 className='text-3xl font-bold mb-8 ml-4'>가상서버 가격표</h1>
+                    <h1 className='text-4xl font-bold mb-8 ml-4 text-center'>가상서버 가격표</h1>
                     <div className='flex flex-wrap w-full justify-center'>
                         {
                             projects.results.map((aProject) => (
@@ -36,7 +34,7 @@ export default function Projects({projects}) {
                     </div>
                 </div>
             </section>
-            </Suspense>
+            <Footer/>
         </>
     );
 }

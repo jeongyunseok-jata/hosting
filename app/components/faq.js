@@ -28,16 +28,16 @@ export default function Home(props) {
                 >
                   <div className="flex items-center justify-between">
                     <span className={`text-2xl font-bold text-gray-800${
-                        selected === 1 ? "relative text-blue-600" : ""
+                        selected === 1 ? "relative text-[#4593fc]" : ""
                       }`}>어떤 운영체제를 지원하나요?</span>
                     <svg
                       className={`w-8 h-8 text-gray-800 transition-all duration-700 ${
-                        selected === 1 ? "transform rotate-180 text-blue-600" : ""
+                        selected === 1 ? "transform rotate-180 text-[#4593fc]" : ""
                       }`}
                       fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
                     >
@@ -64,16 +64,16 @@ export default function Home(props) {
                 >
                   <div className="flex items-center justify-between">
                     <span className={`text-2xl font-bold text-gray-800${
-                        selected === 2 ? "relative text-blue-600" : ""
+                        selected === 2 ? "relative text-[#4593fc]" : ""
                       }`}>어떤 아이피와 포트를 제공하나요?</span>
                     <svg
                       className={`w-8 h-8 text-gray-800 transition-all duration-700 ${
-                        selected === 2 ? "transform rotate-180 text-blue-600" : ""
+                        selected === 2 ? "transform rotate-180 text-[#4593fc]" : ""
                       }`}
                       fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
                     >
@@ -100,16 +100,16 @@ export default function Home(props) {
                 >
                   <div className="flex items-center justify-between">
                     <span className={`text-2xl font-bold text-gray-800${
-                        selected === 3 ? "relative text-blue-600" : ""
+                        selected === 3 ? "relative text-[#4593fc]" : ""
                       }`}>호스팅 환불이 가능한가요?</span>
                     <svg
                       className={`w-8 h-8 text-gray-800 transition-all duration-700 ${
-                        selected === 3 ? "transform rotate-180 text-blue-600" : ""
+                        selected === 3 ? "transform rotate-180 text-[#4593fc]" : ""
                       }`}
                       fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
                     >
@@ -136,16 +136,16 @@ export default function Home(props) {
                 >
                   <div className="flex items-center justify-between">
                     <span className={`text-2xl font-bold text-gray-800${
-                        selected === 4 ? "relative text-blue-600" : ""
+                        selected === 4 ? "relative text-[#4593fc]" : ""
                       }`}>디도스 방어량이 어떻게 되나요?</span>
                     <svg
                       className={`w-8 h-8 text-gray-800 transition-all duration-700 ${
-                        selected === 4 ? "transform rotate-180 text-blue-600" : ""
+                        selected === 4 ? "transform rotate-180 text-[#4593fc]" : ""
                       }`}
                       fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
                     >

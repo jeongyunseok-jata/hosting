@@ -5,21 +5,23 @@ import { Client } from '@notionhq/client';
 import { useState, useRef } from "react";
 
 import Card1 from './components/index-card'
-import Qna from './components/faq'
+import Faq from './components/faq'
 
 import cardimg1 from '../public/icon/ddos.svg'
 import cardimg2 from '../public/icon/earth.svg'
 import cardimg3 from '../public/icon/infra.svg'
 import cardimg4 from '../public/icon/headset.svg'
 import cardimg5 from '../public/icon/price.svg'
+import img1 from '../public/img1.png'
+import Link from 'next/link';
 
 export default function Home() {
   
   return (
     <>
-      <section className='flex items-center justify-center mt-10 mb-44 ci-on'>
+      <section className='flex items-center justify-center mb-32 ci-on'>
         <div className='container mx-auto'>
-          <h1 className='text-3xl font-bold mb-12 ml-4'>퍼스트 호스팅을 선택해야하는 이유</h1>
+          <h1 className='text-3xl font-bold mb-10 ml-4'>퍼스트 호스팅을 선택해야하는 이유</h1>
           <div className='flex flex-wrap w-full justify-center'>
             <Card1 
               imgName={cardimg1}
@@ -49,14 +51,22 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <div className='mb-20'>
+      <section className='mb-20'>
         <div className="container mx-auto px-4">
           <ul className="shadow-box">
-            <h1 className='text-3xl font-bold mb-12'>FAQ. 자주하는 질문</h1>
-            <Qna />
+            <h1 className='text-3xl font-bold mb-10'>자주 묻는 질문</h1>
+            <Faq />
           </ul>
         </div>
-      </div>
+      </section>
+      <section className='w-full h-[500px] bg-img1'>
+        <div className='container mx-auto h-full w-full text-center px-4'>
+          <div className='al-center'>
+            <h1 className='text-3xl md:text-5xl text-white font-semibold leading-3[rem] md:leading-[4rem] pb-16'>고객센터 문의하기 / 365일 24시간<br/> 고객님이 필요하실 때 상담을 지원합니다.</h1>
+            <Link href='https://pf.kakao.com/_qcQxcK' className='bg-[#3182f6] hover:bg-[#2272eb] text-lg px-6 py-3 text-white tracking-wider rounded-md'>카카오톡 상담하기</Link>
+          </div>
+        </div>
+      </section>
     </>
   )   
 }

@@ -32,3 +32,14 @@ ul li {
   left: 50%;
   transform: translateX(-50%);
 }
+.bg-img1 {
+  background-image: url('../public/bg2.png');
+  background-position: center;
+  background-repeat: cover;
+  background-size: cover;
+}
+.al-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}

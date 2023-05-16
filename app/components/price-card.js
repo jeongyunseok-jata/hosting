@@ -4,7 +4,7 @@ import Link from 'next/link';
 import check_icon from '../../public/icon/check.svg'
 
 const price = props => (
-    <div className='inline w-full h-[520px] sm:w-[394px] mx-4 mb-11 hover:scale-105 duration-300 box-border card1-shadow border border-gray-100 relative rounded-md'>
+    <div className='inline w-full h-[520px] sm:w-[394px] mx-4 mb-11 hover:scale-105 duration-300 box-border card1-shadow border border-gray-200 relative rounded-md'>
         <div className='flex justify-center mt-10'>
         </div>
         <div className='px-14 mb-12'>
