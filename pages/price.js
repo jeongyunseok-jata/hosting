@@ -11,7 +11,7 @@ export default function Projects({projects}) {
         <>
             <Header
                 class_name='header-bg'
-                title='호스팅 가격표'
+                title={['호스팅 가격표']}
                 subtitle='호스팅 구매시 이용약관 / 주의사항에 동의한걸로 간주됩니다.'
             />
 
@@ -34,7 +34,7 @@ export default function Projects({projects}) {
                     </div>
                 </div>
             </section>
-            <Footer/>
+            <Footer className='bg-[#f9fafb]'/>
         </>
     );
 }
