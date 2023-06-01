@@ -1,25 +1,40 @@
+'use client'
+
 import Head from "next/head";
 import Link from "next/link";
+
+import { useState, useEffect } from 'react';
 
 import '../app/globals.css'
 import Price from '../app/components/price-card'
 import Header from "@/app/components/header";
 import Footer from '../app/components/footer'
+import Contact from '../app/components/Contact';
+import NavBar from '../app/components/NavBar';
 
 export default function Projects({projects}) {
+
+        const [isLoading, setIsLoading] = useState(true);
+      
+        useEffect(() => {
+          setIsLoading(false);
+        }, []);
+
     return (
         <>
-            <Header
-                class_name='header-bg'
-                title={['호스팅 가격표']}
-                subtitle='호스팅 구매시 이용약관 / 주의사항에 동의한걸로 간주됩니다.'
-            />
-
+            <header className="w-full h-[350px] bg-[#3182f6] mb-24">
+                <NavBar />
+                <div className="header-center">
+                    <div className="text-4xl font-bold text-center text-white">가상서버 가격표</div>
+                    <div className="text-xl font-bold text-center text-white">호스팅 구매시 이용약관 / 주의사항에 동의한 것으로 간주됩니다.</div>
+                </div>
+            </header>
             <section className='flex items-center justify-center mb-10 ci-on'>
                 <div className='container mx-auto'>
-                    <h1 className='text-4xl font-bold mb-8 ml-4 text-center'>가상서버 가격표</h1>
                     <div className='flex flex-wrap w-full justify-center'>
-                        {
+                        {isLoading ? (
+                            <p>로딩중...</p>
+                        ) : (
                             projects.results.map((aProject) => (
                                 <Price
                                     price_name={aProject.properties.name.title[0].plain_text}
@@ -30,10 +45,11 @@ export default function Projects({projects}) {
                                     price={aProject.properties.price.rich_text[0].plain_text}
                                 />
                             ))
-                        }
+                        )}
                     </div>
                 </div>
             </section>
+            <Contact />
             <Footer className='bg-[#f9fafb]'/>
         </>
     );

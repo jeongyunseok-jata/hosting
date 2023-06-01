@@ -1,15 +1,14 @@
 import Image from 'next/image'
 
 const indexbox = (props) => {
-  const Imgclass = `mb-5 w-[350px] h-[200px] float-right flex justify-center rounded-xl ${props.classname || ''}`;
     return (
-        <div className='inline h-[320px] w-full mx-4'>
-            <div className={Imgclass}>
+        <div className='h-[320px]'>
+            <div className='mb-5 w-[350px] rounded-xl'>
                 <Image 
                     src={props.imgName}
                     width={600}
                     height={600}
-                    className='w-[150px] h-[150px] al-center'
+                    className='w-[150px] h-[150px]'
                 />
             </div>
             <div className='w-1/2'>

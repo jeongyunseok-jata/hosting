@@ -56,14 +56,14 @@ const price = props => (
                     src={check_icon}
                     width={20}
                     height={20}
-                    className='w-[27px] h-[27px] fill-blue-900 mr-3 bg-blue-100 rounded-full p-1.5'
+                    className='w-[27px] h-[27px] fill-[blue-900] mr-3 bg-blue-100 rounded-full p-1.5'
                 />
                 <p className='text-lg font-semibold text-gray-600'>
                     {props.bandwidth}Mbps BANDWIDTH
                 </p>
             </div>
         </div>
-        <div className='price-btn bg-blue-700 w-56 py-3 text-center rounded-md'>
+        <div className='price-btn bg-[#3182f6] w-56 py-3 text-center rounded-md'>
             <Link href='https://pf.kakao.com/_qcQxcK' className='text-white text-lg'>문의하기</Link>
         </div>
     </div>
