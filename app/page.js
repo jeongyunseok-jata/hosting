@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { Client } from '@notionhq/client';
 import { useState, useRef, useEffect } from 'react';
+import Head from 'next/head';
 
 import Card1 from './components/index-card'
 import Faq from './components/faq'
@@ -22,7 +23,9 @@ export default function Home() {
   
   return (
     <>
-    
+      <Head>
+        <link rel="preload" href="../public/bg3.webp" as="image" />
+      </Head>
       <section className='overflow-hidden whitespace-nowrap container-2 mx-auto mb-32'>
         <h1 className='text-3xl font-bold mb-10' id='show'>이용자들의 생생한 후기</h1>
         <div className='slide-animation'>
