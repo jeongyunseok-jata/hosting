@@ -12,6 +12,15 @@ import Footer from '../app/components/footer'
 import Contact from '../app/components/Contact';
 import NavBar from '../app/components/NavBar';
 
+export const metadata = {
+    title: 'First Hosting | 2023',
+    description: '업타임 99% 한국리전 디도스 방어 IDC를 제공합니다.',
+    icons: {
+      icon: '../public/logo.png',
+    },
+  }
+  
+
 export default function Projects({projects}) {
 
         const [isLoading, setIsLoading] = useState(true);

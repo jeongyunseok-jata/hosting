@@ -16,13 +16,13 @@ import cardimg2 from '../public/icon/earth.svg'
 import cardimg3 from '../public/icon/infra.svg'
 import cardimg4 from '../public/icon/headset.svg'
 import cardimg5 from '../public/icon/price.svg'
-import img1 from '../public/img1.png'
 import Link from 'next/link';
 
-export default function Home() { 
+export default function Home() {
   
   return (
     <>
+    
       <section className='overflow-hidden whitespace-nowrap container-2 mx-auto mb-32'>
         <h1 className='text-3xl font-bold mb-10' id='show'>이용자들의 생생한 후기</h1>
         <div className='slide-animation'>
