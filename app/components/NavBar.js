@@ -24,6 +24,33 @@ const Navbar = () => {
     window.addEventListener('scroll', changeColor);
   }, []);
 
+  const [isOpen1, setIsOpen1] = useState(false);
+  const [isOpen2, setIsOpen2] = useState(false);
+
+  const toggleDropdown1 = () => {
+    setIsOpen1(!isOpen1);
+  };
+
+  const toggleDropdown2 = () => {
+    setIsOpen2(!isOpen2);
+  };
+
+  const openDropdown1 = () => {
+    setIsOpen1(true);
+  };
+
+  const closeDropdown1 = () => {
+    setIsOpen1(false);
+  };
+
+  const openDropdown2 = () => {
+    setIsOpen2(true);
+  };
+
+  const closeDropdown2 = () => {
+    setIsOpen2(false);
+  };
+
   return (
     <div
       style={{ backgroundColor: `${color}` }}
@@ -37,11 +64,49 @@ const Navbar = () => {
             </h1>
           </Link>
           <ul className='hidden sm:flex' style={{ color: `${textColor}` }}>
-            <li className='p-4'>
-              <Link href='/price'>가격표</Link>
+            <li className='p-4'
+              onMouseEnter={openDropdown1}
+              onMouseLeave={closeDropdown1}
+            >
+              <p href='/price'
+                className='cursor-pointer'
+                onClick={toggleDropdown1}
+              >가격표</p>
+              {isOpen1 && (
+              <div
+                className="absolute mt-2 bg-white rounded text-center"
+                onMouseEnter={openDropdown1}
+                onMouseLeave={closeDropdown1}
+              >
+                <ul>
+                  <Link href='/price'><li className="px-5 py-3 text-black hover:bg-gray-300 rounded">가상 서버</li></Link>
+                  <Link href='/price'><li className="px-5 py-3 text-black hover:bg-gray-300 rounded">단독 서버</li></Link>
+                  <Link href='/price'><li className="px-5 py-3 text-black hover:bg-gray-300 rounded">코로케이션</li></Link>
+                </ul>
+              </div>
+            )}
             </li>
-            <li className='p-4'>
-              <Link href=''>약관</Link>
+            <li className='p-4'
+              onMouseEnter={openDropdown2}
+              onMouseLeave={closeDropdown2}
+            >
+              <p href=''
+                className='cursor-pointer'
+                onClick={toggleDropdown2}
+              >약관</p>
+              {isOpen2 && (
+              <div
+                className="absolute mt-2 bg-white rounded text-center"
+                onMouseEnter={openDropdown2}
+                onMouseLeave={closeDropdown2}
+              >
+                <ul>
+                  <Link href='/price'><li className="px-5 py-3 text-black hover:bg-gray-300 rounded">서비스 이용약관</li></Link>
+                  <Link href='/price'><li className="px-5 py-3 text-black hover:bg-gray-300 rounded">주의사항</li></Link>
+                  <Link href='/price'><li className="px-5 py-3 text-black hover:bg-gray-300 rounded">개인정보처리방침</li></Link>
+                </ul>
+              </div>
+            )}
             </li>
             <li className='p-4'>
               <Link href='https://stats.uptimerobot.com/Jj0vRHBrlk'>업타임</Link>
