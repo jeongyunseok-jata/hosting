@@ -4,27 +4,27 @@ export default function footer() {
   return (
     <div className="w-full h-[450px] sm:h-[375px]">
         <div className="container mx-auto px-4">
-            <div className="text-4xl font-bold text-[#2272eb] pt-11 pb-10">FirstHosting</div>
+            <div className="text-4xl font-bold text-[#000] pt-11 pb-10">FirstHosting</div>
             <div className="flex flex-wrap w-full text-[#545c66]">
                 <div className="w-full sm:w-1/4 mb-10 sm:mb-0">
-                    <div className="text-xl font-semibold mb-3 border-b-2 border-[#3182f6] w-1/6 pb-2 text-[#4e5968]">Company</div>
+                    <div className="text-xl font-semibold mb-3 border-b-2 border-[#2272eb] w-1/6 pb-2 text-[#000]">Company</div>
                     <div className="mb-1">대표:한관웅</div>
                     <div className="hover:ml-[-6px] duration-300 hover:text-[#3182f6] hover:underline"><Link href='https://moneypin.biz/bizno/detail/2461301852/'>사업자 번호:246-13-01852</Link></div>
                 </div>
                 <div className="w-full sm:w-1/4 mb-10 sm:mb-0">
-                    <div className="text-xl font-semibold mb-3 border-b-2 border-[#3182f6] w-1/6 pb-2 text-[#4e5968]">Docs</div>
+                    <div className="text-xl font-semibold mb-3 border-b-2 border-[#2272eb] w-1/6 pb-2 text-[#000]">Docs</div>
                     <div className="mb-1 hover:ml-[-6px] duration-300">서비스 이용약관</div>
                     <div className="mb-1 hover:ml-[-6px] duration-300">주의사항</div>
                     <div className="hover:ml-[-6px] duration-300">개인정보처리방침</div>
                 </div>
                 <div className="w-full sm:w-1/4 mb-10 sm:mb-0">
-                    <div className="text-xl font-semibold mb-3 border-b-2 border-[#3182f6] w-1/6 pb-2 text-[#4e5968]">Service</div>
+                    <div className="text-xl font-semibold mb-3 border-b-2 border-[#2272eb] w-1/6 pb-2 text-[#000]">Service</div>
                     <div className="mb-1 hover:ml-[-6px] duration-300 hover:text-[#3182f6] hover:underline"><Link href='https://stats.uptimerobot.com/Jj0vRHBrlk'>업타임</Link></div>
                     <div className="mb-1 hover:ml-[-6px] duration-300 hover:text-[#3182f6] hover:underline"><Link href='/price'>가격표</Link></div>
                     <div className="hover:ml-[-6px] duration-300 hover:text-[#3182f6] hover:underline">대시보드</div>
                 </div>
                 <div className="w-full sm:w-1/4">
-                    <div className="text-xl font-semibold mb-3 border-b-2 border-[#3182f6] w-1/6 pb-2 text-[#4e5968]">Contact</div>
+                    <div className="text-xl font-semibold mb-3 border-b-2 border-[#2272eb] w-1/6 pb-2 text-[#000]">Contact</div>
                     <div className="mb-1 hover:ml-[-6px] duration-300 hover:text-[#3182f6] hover:underline"><Link href='https://discord.com/invite/3eQF6Kvypv'>디스코드</Link></div>
                     <div className="hover:ml-[-6px] duration-300 hover:text-[#3182f6] hover:underline"><Link href='https://pf.kakao.com/_qcQxcK'>카카오톡</Link></div>
                 </div>

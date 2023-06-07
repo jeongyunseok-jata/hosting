@@ -20,7 +20,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <Header
-          class_name='header-bg'
           title={['합리적인 가격에', '고성능 서버를', '상담받아보세요.']}
           subtitle='합리적인 가격에 빠른 상담이 가능한 퍼스트 호스팅!'
         />

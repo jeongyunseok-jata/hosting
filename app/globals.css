@@ -5,24 +5,37 @@
 
 html {
   background-color: #f8f8f8;
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
 }
 ul li {
   list-style: none;
 }
-.header-bg {
-  background-image: url('../public/bg3.webp');
+.bg-header {
+  background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+}
+.bg-price {
+  background-image: linear-gradient(-225deg, #3D4E81 0%, #5753C9 48%, #6E7FF3 100%);
+}
+.bg-contact {
+  background-image: url('../public/bg2.png');
   background-position: center;
   background-repeat: cover;
   background-size: cover;
+}
+.bg-menu {
+  background-color: rgba(0,0,0,.8);
 }
 .header-center {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
-.svg-fill {
-}
-.card1-shadow {
+.card-shadow {
   box-shadow: rgba(0, 0, 0, .1) 2px 13px 24px;
 }
 .price-btn {
@@ -31,16 +44,20 @@ ul li {
   left: 50%;
   transform: translateX(-50%);
 }
-.bg-img1 {
-  background-image: url('../public/bg2.png');
-  background-position: center;
-  background-repeat: cover;
-  background-size: cover;
-}
-.al-center {
+.contact-center {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+}
+.slide-animation {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  position: relative;
+  animation-name: slide;
+  animation-duration: 24s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 @keyframes slide {
   from { left: 0 }
@@ -73,16 +90,6 @@ ul li {
   .container-2 {
       max-width: 1504px;
   }
-}
-.slide-animation {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-shrink: 0;
-  position: relative;
-  animation-name: slide;
-  animation-duration: 18s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
 }
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {

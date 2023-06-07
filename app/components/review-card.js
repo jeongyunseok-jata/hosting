@@ -1,5 +1,5 @@
 const Review = (props) => (
-    <div className="w-[450px] h-52 bg-[#e5e8eb] rounded-xl px-10 py-10 mr-7 inline-block break-all">
+    <div className="w-[450px] h-auto bg-[#e5e8eb] rounded-xl px-10 py-10 mr-7 inline-block break-all">
       <div className="text-xl font-medium">
         {props.content.map((line, index) => (
             <p key={index}>

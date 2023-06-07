@@ -51,6 +51,16 @@ const Navbar = () => {
     setIsOpen2(false);
   };
 
+  const mobileOpen1 = () => {
+    toggleDropdown1();
+    closeDropdown2();
+  };
+
+  const mobileOpen2 = () => {
+    toggleDropdown2();
+    closeDropdown1();
+  };
+
   return (
     <div
       style={{ backgroundColor: `${color}` }}
@@ -64,88 +74,170 @@ const Navbar = () => {
             </h1>
           </Link>
           <ul className='hidden sm:flex' style={{ color: `${textColor}` }}>
-            <li className='p-4'
+            <li
+              className='p-4'
               onMouseEnter={openDropdown1}
               onMouseLeave={closeDropdown1}
             >
-              <p href='/price'
+              <p
+                href='/price'
                 className='cursor-pointer'
                 onClick={toggleDropdown1}
-              >가격표</p>
-              {isOpen1 && (
-              <div
-                className="absolute mt-2 bg-white rounded text-center"
-                onMouseEnter={openDropdown1}
-                onMouseLeave={closeDropdown1}
               >
-                <ul>
-                  <Link href='/price'><li className="px-5 py-3 text-black hover:bg-gray-300 rounded">가상 서버</li></Link>
-                  <Link href='/price'><li className="px-5 py-3 text-black hover:bg-gray-300 rounded">단독 서버</li></Link>
-                  <Link href='/price'><li className="px-5 py-3 text-black hover:bg-gray-300 rounded">코로케이션</li></Link>
-                </ul>
-              </div>
-            )}
+                가격표
+              </p>
+              {isOpen1 && (
+                <div
+                  className="absolute mt-2 bg-white rounded text-center"
+                  onMouseEnter={openDropdown1}
+                  onMouseLeave={closeDropdown1}
+                >
+                  <ul>
+                    <Link href='/price'>
+                      <li className="px-5 py-3 text-black hover:bg-gray-300 rounded">가상 서버</li>
+                    </Link>
+                    <Link href='/price'>
+                      <li className="px-5 py-3 text-black hover:bg-gray-300 rounded">단독 서버</li>
+                    </Link>
+                    <Link href='/price'>
+                      <li className="px-5 py-3 text-black hover:bg-gray-300 rounded">코로케이션</li>
+                    </Link>
+                  </ul>
+                </div>
+              )}
             </li>
-            <li className='p-4'
+            <li
+              className='p-4'
               onMouseEnter={openDropdown2}
               onMouseLeave={closeDropdown2}
             >
-              <p href=''
+              <p
+                href=''
                 className='cursor-pointer'
                 onClick={toggleDropdown2}
-              >약관</p>
-              {isOpen2 && (
-              <div
-                className="absolute mt-2 bg-white rounded text-center"
-                onMouseEnter={openDropdown2}
-                onMouseLeave={closeDropdown2}
               >
-                <ul>
-                  <Link href='/price'><li className="px-5 py-3 text-black hover:bg-gray-300 rounded">서비스 이용약관</li></Link>
-                  <Link href='/price'><li className="px-5 py-3 text-black hover:bg-gray-300 rounded">주의사항</li></Link>
-                  <Link href='/price'><li className="px-5 py-3 text-black hover:bg-gray-300 rounded">개인정보처리방침</li></Link>
-                </ul>
-              </div>
-            )}
+                약관
+              </p>
+              {isOpen2 && (
+                <div
+                  className="absolute mt-2 bg-white rounded text-center"
+                  onMouseEnter={openDropdown2}
+                  onMouseLeave={closeDropdown2}
+                >
+                  <ul>
+                    <Link href='/price'>
+                      <li className="px-5 py-3 text-black hover:bg-gray-300 rounded">서비스 이용약관</li>
+                    </Link>
+                    <Link href='/price'>
+                      <li className="px-5 py-3 text-black hover:bg-gray-300 rounded">주의사항</li>
+                    </Link>
+                    <Link href='/price'>
+                      <li className="px-5 py-3 text-black hover:bg-gray-300 rounded">개인정보처리방침</li>
+                    </Link>
+                  </ul>
+                </div>
+              )}
             </li>
             <li className='p-4'>
               <Link href='https://stats.uptimerobot.com/Jj0vRHBrlk'>업타임</Link>
             </li>
             <li className='p-4'>
-              <Link href='https://pf.kakao.com/_qcQxcK'>상담</Link>
+              <Link href='https://pf.kakao.com/_qcQxcK'>문의하기</Link>
             </li>
           </ul>
 
           {/* Mobile Button */}
-          <div onClick={handleNav} className='block sm:hidden z-10' style={{ color: `${textColor}` }}>
+          <div
+            onClick={handleNav}
+            className={
+              nav
+                ? 'block sm:hidden z-10 w-full bg-menu m-0 p-0 h-screen'
+                : 'block sm:hidden z-10'
+            }
+            style={{ color: `${textColor}` }}
+          >
             {nav ? (
-              <AiOutlineClose size={26} style={{ color: '#fff' , marginRight: '11px' }} />
+              <div
+                id='hello-id'
+                className='h-screen w-full float-right m-0 p-0'
+              ></div>
             ) : (
-              <AiOutlineMenu size={26} style={{ color: `${textColor}`, marginRight: '11px' }} />
+              <AiOutlineMenu
+                size={26}
+                style={{ color: `${textColor}`, marginRight: '11px' }}
+              />
             )}
           </div>
           {/* Mobile Menu */}
           <div
             className={
               nav
-                ? 'sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-[#2656A6] text-center'
-                : 'sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-[#2656A6] text-center'
+                ? 'sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-3/4 h-screen bg-header text-center z-20 transition-all duration-300 transform translate-x-0'
+                : 'sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-3/4 h-screen text-center z-20 transition-all duration-300 transform translate-x-full'
             }
           >
-            <ul>
-              <li onClick={handleNav} className='p-4 text-3xl font-semibold hover:text-gray-300'>
-                <Link href='/price'>가격표</Link>
-              </li>
-              <li onClick={handleNav} className='p-4 text-3xl font-semibold hover:text-gray-300'>
-                <Link href='/'>약관</Link>
-              </li>
-              <li onClick={handleNav} className='p-4 text-3xl font-semibold hover:text-gray-300'>
-                <Link href='https://stats.uptimerobot.com/Jj0vRHBrlk'>업타임</Link>
-              </li>
-              <li onClick={handleNav} className='p-4 text-3xl font-semibold hover:text-gray-300'>
-                <Link href='https://pf.kakao.com/_qcQxcK'>상담</Link>
-              </li>
-            </ul>
+            {nav && (
+              <ul className='w-full'>
+                <li
+                  className='p-4 text-3xl font-semibold hover:text-gray-300'
+                  onClick={mobileOpen1}
+                >
+                  <p
+                    href='/price'
+                    className='cursor-pointer'
+                  >
+                    가격표
+                  </p>
+                  {isOpen1 && (
+                    <div className="relative mt-2 text-center text-xl">
+                      <ul className='w-full'>
+                        <Link href='/price'>
+                          <li className="text-neutral-300 py-[5px] px-12">가상 서버</li>
+                        </Link>
+                        <Link href='/price'>
+                          <li className="text-neutral-300 py-[5px]">단독 서버</li>
+                        </Link>
+                        <Link href='/price'>
+                          <li className="text-neutral-300 py-[5px]">코로케이션</li>
+                        </Link>
+                      </ul>
+                    </div>
+                  )}
+                </li>
+                <li
+                  className='p-4 text-3xl font-semibold hover:text-gray-300'
+                  onClick={mobileOpen2}
+                >
+                  <p
+                    href=''
+                    className='cursor-pointer'
+                  >
+                    약관
+                  </p>
+                  {isOpen2 && (
+                    <div className="relative mt-2 text-center text-xl">
+                      <ul className='w-full'>
+                        <Link href='/price'>
+                          <li className="text-neutral-300 py-[5px] px-12">서비스 이용약관</li>
+                        </Link>
+                        <Link href='/price'>
+                          <li className="text-neutral-300 py-[5px]">주의사항</li>
+                        </Link>
+                        <Link href='/price'>
+                          <li className="text-neutral-300 py-[5px]">개인정보처리방침</li>
+                        </Link>
+                      </ul>
+                    </div>
+                  )}
+                </li>
+                <li className='p-4 text-3xl font-semibold hover:text-gray-300'>
+                  <Link href='https://stats.uptimerobot.com/Jj0vRHBrlk'>업타임</Link>
+                </li>
+                <li className='p-4 text-3xl font-semibold hover:text-gray-300'>
+                  <Link href='https://pf.kakao.com/_qcQxcK'>문의하기</Link>
+                </li>
+              </ul>
+            )}
           </div>
         </div>
       </div>

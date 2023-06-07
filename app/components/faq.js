@@ -31,7 +31,7 @@ export default function Home(props) {
                         selected === 1 ? "relative text-[#4593fc]" : ""
                       }`}>어떤 운영체제를 지원하나요?</span>
                     <svg
-                      className={`w-8 h-8 text-gray-800 transition-all duration-700 ${
+                      className={`w-8 h-8 text-gray-800 transition-all duration-500 ${
                         selected === 1 ? "transform rotate-180 text-[#4593fc]" : ""
                       }`}
                       fill="none"
@@ -46,7 +46,7 @@ export default function Home(props) {
                   </div>
                 </button>
                 <div
-                  className="relative overflow-hidden transition-all duration-700"
+                  className="relative overflow-hidden transition-all duration-500"
                   ref={container}
                   style={{
                     maxHeight: selected === 1 ? container.current.scrollHeight : 0,
@@ -67,7 +67,7 @@ export default function Home(props) {
                         selected === 2 ? "relative text-[#4593fc]" : ""
                       }`}>어떤 아이피와 포트를 제공하나요?</span>
                     <svg
-                      className={`w-8 h-8 text-gray-800 transition-all duration-700 ${
+                      className={`w-8 h-8 text-gray-800 transition-all duration-500 ${
                         selected === 2 ? "transform rotate-180 text-[#4593fc]" : ""
                       }`}
                       fill="none"
@@ -82,7 +82,7 @@ export default function Home(props) {
                   </div>
                 </button>
                 <div
-                  className="relative overflow-hidden transition-all duration-700"
+                  className="relative overflow-hidden transition-all duration-500"
                   ref={container}
                   style={{
                     maxHeight: selected === 2 ? container.current.scrollHeight : 0,
@@ -103,7 +103,7 @@ export default function Home(props) {
                         selected === 3 ? "relative text-[#4593fc]" : ""
                       }`}>호스팅 환불이 가능한가요?</span>
                     <svg
-                      className={`w-8 h-8 text-gray-800 transition-all duration-700 ${
+                      className={`w-8 h-8 text-gray-800 transition-all duration-500 ${
                         selected === 3 ? "transform rotate-180 text-[#4593fc]" : ""
                       }`}
                       fill="none"
@@ -118,7 +118,7 @@ export default function Home(props) {
                   </div>
                 </button>
                 <div
-                  className="relative overflow-hidden transition-all duration-700"
+                  className="relative overflow-hidden transition-all duration-500"
                   ref={container}
                   style={{
                     maxHeight: selected === 3 ? container.current.scrollHeight : 0,
@@ -139,7 +139,7 @@ export default function Home(props) {
                         selected === 4 ? "relative text-[#4593fc]" : ""
                       }`}>디도스 방어량이 어떻게 되나요?</span>
                     <svg
-                      className={`w-8 h-8 text-gray-800 transition-all duration-700 ${
+                      className={`w-8 h-8 text-gray-800 transition-all duration-500 ${
                         selected === 4 ? "transform rotate-180 text-[#4593fc]" : ""
                       }`}
                       fill="none"
@@ -154,7 +154,7 @@ export default function Home(props) {
                   </div>
                 </button>
                 <div
-                  className="relative overflow-hidden transition-all duration-700"
+                  className="relative overflow-hidden transition-all duration-500"
                   ref={container}
                   style={{
                     maxHeight: selected === 4 ? container.current.scrollHeight : 0,

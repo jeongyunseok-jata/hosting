@@ -6,10 +6,8 @@ import Link from 'next/link';
 import NavBar from './NavBar';
 
 const Header = (props) => {
-  const headerClass = `w-full h-[580px] mb-16  ${props.class_name || ''}`;
-
   return (
-    <header className={headerClass}>
+    <header className='w-full h-[580px] mb-16 bg-header'>
       <NavBar />
       <div className='text-center header-center container-2 mx-auto'>
         <h1 className='text-4xl font-bold text-white show-animation'>

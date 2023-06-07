@@ -31,7 +31,7 @@ export default function Projects({projects}) {
 
     return (
         <>
-            <header className="w-full h-[350px] bg-[#3182f6] mb-24">
+            <header className="w-full h-[350px] bg-price mb-24">
                 <NavBar />
                 <div className="header-center">
                     <div className="text-4xl font-bold text-center text-white">가상서버 가격표</div>
