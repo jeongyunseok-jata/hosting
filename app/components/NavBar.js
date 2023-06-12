@@ -65,7 +65,7 @@ const Navbar = () => {
   return (
     <div
       style={{ backgroundColor: `${color}` }}
-      className='fixed left-0 top-0 w-full z-10 ease-in duration-200'
+      className='fixed left-0 top-0 w-full z-10 ease-in duration-200 px-4'
     >
       <div className="container mx-auto">
         <div className='max-w-[1536px] m-auto flex justify-between items-center p-1 font-semibold text-white'>
@@ -74,9 +74,9 @@ const Navbar = () => {
               First 호스팅
             </h1>
           </Link>
-          <ul className='hidden sm:flex'style={{ color: `${textColor}` }}>
+          <ul className='hidden px-4 sm:flex'style={{ color: `${textColor}` }}>
             <li
-              className=''
+              className='text-lg pr-4'
               onMouseEnter={openDropdown1}
               onMouseLeave={closeDropdown1}
             >
@@ -89,7 +89,7 @@ const Navbar = () => {
               </p>
               {isOpen1 && (
                 <div
-                  className="absolute mt-2 bg-white rounded text-center"
+                  className="absolute mt-2 bg-white rounded text-center text-lg"
                   onMouseEnter={openDropdown1}
                   onMouseLeave={closeDropdown1}
                 >
@@ -108,7 +108,7 @@ const Navbar = () => {
               )}
             </li>
             <li
-              className=''
+              className='text-lg pr-4'
               onMouseEnter={openDropdown2}
               onMouseLeave={closeDropdown2}
             >
@@ -121,7 +121,7 @@ const Navbar = () => {
               </p>
               {isOpen2 && (
                 <div
-                  className="absolute mt-2 bg-white rounded text-center"
+                  className="absolute mt-2 bg-white rounded text-center text-lg"
                   onMouseEnter={openDropdown2}
                   onMouseLeave={closeDropdown2}
                 >
@@ -139,10 +139,10 @@ const Navbar = () => {
                 </div>
               )}
             </li>
-            <li className=''>
+            <li className='text-lg pr-4'>
               <Link href='https://stats.uptimerobot.com/Jj0vRHBrlk'>업타임</Link>
             </li>
-            <li className=''>
+            <li className='text-lg'>
               <Link href='https://pf.kakao.com/_qcQxcK'>문의하기</Link>
             </li>
           </ul>
@@ -152,8 +152,8 @@ const Navbar = () => {
             onClick={handleNav}
             className={
               nav
-                ? 'absolute'
-                : ''
+                ? 'block absolute'
+                : 'sm:hidden'
             }
             style={{ color: `${textColor}` }}
           >
