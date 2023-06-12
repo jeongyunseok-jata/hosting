@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import Image from 'next/image';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -151,29 +152,47 @@ const Navbar = () => {
             onClick={handleNav}
             className={
               nav
-                ? 'block sm:hidden z-10 w-full bg-menu m-0 p-0 h-screen'
-                : 'block sm:hidden z-10'
+                ? 'absolute'
+                : ''
             }
             style={{ color: `${textColor}` }}
           >
+            
             {nav ? (
               <div
-                id='hello-id'
-                className='h-screen w-full float-right m-0 p-0'
+                className='h-screen w-full float-right m-0 p-0 block relative'
               ></div>
             ) : (
-              <AiOutlineMenu
-                size={26}
-                style={{ color: `${textColor}`, marginRight: '11px' }}
-              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-8 h-8 mr-4 mt-[-5px]"
+                viewBox="0 0 20 20"
+                fill={textColor}
+                stroke="currentColor"
+                strokeWidth="2.2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M3 12h18M3 6.5h17M3 17.5h18" />
+              </svg>
+
             )}
           </div>
+          <div
+            onClick={handleNav}
+            className={
+              nav
+                ? 'sm:hidden absolute top-0 left-0 right-0 bottom-0 w-full h-screen bg-menuOut translate-all duration-[2ms]'
+                : 'sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 z-10'
+            }
+            style={{ color: `${textColor}` }}
+          ></div>
           {/* Mobile Menu */}
           <div
             className={
               nav
-                ? 'sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-3/4 h-screen bg-header text-center z-20 transition-all duration-300 transform translate-x-0'
-                : 'sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-3/4 h-screen text-center z-20 transition-all duration-300 transform translate-x-full'
+                ? 'sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-2/4 h-screen bg-menu text-center z-20 transition-all duration-300 transform translate-x-0'
+                : 'sm:hidden absolute top-0 left-[-100%] right-0 bottom-0'
             }
           >
             {nav && (

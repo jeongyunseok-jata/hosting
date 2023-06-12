@@ -16,18 +16,24 @@ ul li {
   list-style: none;
 }
 .bg-header {
-  background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+  background-image: url('../public/bg5.jpg');
+  background-position: center;
+  background-repeat: cover;
+  background-size: cover;
 }
 .bg-price {
   background-image: linear-gradient(-225deg, #3D4E81 0%, #5753C9 48%, #6E7FF3 100%);
 }
 .bg-contact {
-  background-image: url('../public/bg2.png');
+  background-image: url('../public/bg2.jpg');
   background-position: center;
   background-repeat: cover;
   background-size: cover;
 }
 .bg-menu {
+  background-color: #1e2228;
+}
+.bg-menuOut {
   background-color: rgba(0,0,0,.8);
 }
 .header-center {
@@ -62,6 +68,10 @@ ul li {
 @keyframes slide {
   from { left: 0 }
   to { left: -2660px }
+}
+@keyframes slide {
+  from { left: 0 }
+  to { left: -2803px }
 }
 .container-2 {
   width: 100%;
