@@ -81,7 +81,7 @@ const Navbar = () => {
               onMouseLeave={closeDropdown1}
             >
               <p
-                href='/price'
+                href='/price-kh'
                 className='cursor-pointer'
                 onClick={toggleDropdown1}
               >
@@ -94,13 +94,13 @@ const Navbar = () => {
                   onMouseLeave={closeDropdown1}
                 >
                   <ul>
-                    <Link href='/price'>
+                    <Link href='/price-kh'>
                       <li className="px-5 py-3 text-black hover:bg-gray-300 rounded">가상 서버</li>
                     </Link>
-                    <Link href='/price'>
+                    <Link href='/price-kh'>
                       <li className="px-5 py-3 text-black hover:bg-gray-300 rounded">단독 서버</li>
                     </Link>
-                    <Link href='/price'>
+                    <Link href='/price-kh'>
                       <li className="px-5 py-3 text-black hover:bg-gray-300 rounded">코로케이션</li>
                     </Link>
                   </ul>
@@ -126,13 +126,13 @@ const Navbar = () => {
                   onMouseLeave={closeDropdown2}
                 >
                   <ul>
-                    <Link href='/price'>
+                    <Link href='/price-kh'>
                       <li className="px-5 py-3 text-black hover:bg-gray-300 rounded">서비스 이용약관</li>
                     </Link>
-                    <Link href='/price'>
+                    <Link href='/price-kh'>
                       <li className="px-5 py-3 text-black hover:bg-gray-300 rounded">주의사항</li>
                     </Link>
-                    <Link href='/price'>
+                    <Link href='/price-kh'>
                       <li className="px-5 py-3 text-black hover:bg-gray-300 rounded">개인정보처리방침</li>
                     </Link>
                   </ul>
@@ -197,7 +197,7 @@ const Navbar = () => {
                   onClick={mobileOpen1}
                 >
                   <p
-                    href='/price'
+                    href='/price-kh'
                     className='cursor-pointer pb-4 pl-7'
                   >
                     가격표
@@ -208,13 +208,13 @@ const Navbar = () => {
                   {isOpen1 && (
                     <div className="relative mt-2">
                       <ul className='w-full pl-14 text-base'>
-                        <Link href='/price'>
+                        <Link href='/price-kh'>
                           <li className="pb-4">가상 서버</li>
                         </Link>
-                        <Link href='/price'>
+                        <Link href='/price-kh'>
                           <li className="pb-4">단독 서버</li>
                         </Link>
-                        <Link href='/price'>
+                        <Link href='/price-kh'>
                           <li className="pb-4">코로케이션</li>
                         </Link>
                       </ul>
@@ -238,7 +238,7 @@ const Navbar = () => {
                   {isOpen2 && (
                     <div className="relative mt-2 text-base pl-14">
                       <ul className='w-full'>
-                        <Link href='/price'>
+                        <Link href='/price-kh'>
                           <li className="pb-4">서비스 이용약관</li>
                         </Link>
                         <Link href='/price'>
