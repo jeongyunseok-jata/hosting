@@ -1,15 +1,8 @@
-'use client'
-
-import Image from 'next/image';
-import Link from 'next/link';
-
 import React, { useEffect } from 'react';
 import { useSpring, animated } from 'react-spring';
+import '../app/globals.css';
 
-import NavBar from './NavBar';
-
-const Header = (props1) => {
-
+export default function Home() {
   const [stars, setStars] = React.useState([]);
 
   React.useEffect(() => {
@@ -45,7 +38,7 @@ const Header = (props1) => {
   useEffect(() => {
     const calculateStars = () => {
       set({
-        opacity: .6,
+        opacity: .2,
         scale: 1,
         from: {
           opacity: 0,
@@ -60,8 +53,9 @@ const Header = (props1) => {
 
     calculateStars();
   }, []);
+
   return (
-    <header className="w-full h-[580px] mb-16 bg-star">
+    <div className="h-screen bg-star">
       {stars.map((star) => (
         <animated.div
           key={star.id}
@@ -78,18 +72,7 @@ const Header = (props1) => {
           }}
         ></animated.div>
       ))}
-      <NavBar />
-      <div className='text-center header-center container-2 mx-auto'>
-        <h1 className='text-4xl font-bold text-white show-animation'>
-          {props1.title.map((line, index) => (
-            <p key={index} className='mb-2'>{line}</p>
-          ))}
-        </h1>
-        <p className='text-lg font-semibold text-[#ddd] mt-1 mb-10 show-animation '>{props1.subtitle}</p>
-        <Link href='https://pf.kakao.com/_qcQxcK' className='text-lg px-16 py-3 text-black tracking-wider rounded-md bg-white hover:bg-slate-200'>문의하기</Link>
-      </div>
-    </header>
+      <p className='text-4xl font-bold text-white text-center contact-center'>first 호스팅</p>
+    </div>
   );
 }
-
-export default Header;

@@ -2,7 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-
+* {
+  margin: 0;
+  padding: 0;
+}
 html {
   background-color: #f8f8f8;
   margin: 0;
@@ -50,6 +53,25 @@ ul li {
 .bg-menuOut {
   background-color: rgba(0,0,0,.8);
 }
+.bg-star {
+  background: linear-gradient(#001111 32%, #00305d);
+}
+@keyframes twinkle {
+  0% {
+    opacity: .06;
+  }
+   50% {
+    opacity: .6;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-twinkle {
+  animation: twinkle 1.5s ease-in-out infinite;
+}
+
 .header-center {
   position: relative;
   top: 50%;
