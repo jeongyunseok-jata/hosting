@@ -2,14 +2,13 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-
 import React, { useEffect } from 'react';
 import { useSpring, animated } from 'react-spring';
-
 import NavBar from './NavBar';
+import Lottie from 'react-lottie-player'
+import moonAnimation from '../../public/animation/moon2.json'
 
 const Header = (props1) => {
-
   const [stars, setStars] = React.useState([]);
 
   React.useEffect(() => {
@@ -20,7 +19,8 @@ const Header = (props1) => {
         id: index + 1,
         top: Math.random() * 100,
         left: Math.random() * 100,
-        size: 1.6 + Math.random() * 0.9, // 크기 범위 수정
+        size: 1.6 + Math.random() * 0.7,
+        ShadowSize: 1.6 + Math.random() * 1.2,
         animationDelay: Math.random() * 4,
         animationDuration: 8 + Math.random() * 2,
       }));
@@ -45,7 +45,7 @@ const Header = (props1) => {
   useEffect(() => {
     const calculateStars = () => {
       set({
-        opacity: .6,
+        opacity: 0.2,
         scale: 1,
         from: {
           opacity: 0,
@@ -60,8 +60,34 @@ const Header = (props1) => {
 
     calculateStars();
   }, []);
+
   return (
-    <header className="w-full h-[580px] mb-16 bg-star">
+    <header className="w-full h-[90vh] mb-16 bg-star relative">
+      <NavBar />
+      <div className="text-center header-center container-2 mx-auto">
+        <h1 className="text-4xl font-bold text-white show-animation">
+          {props1.title.map((line, index) => (
+            <p key={index} className="mb-2">
+              {line}
+            </p>
+          ))}
+        </h1>
+        <p className="text-lg font-semibold text-[#ddd] mt-1 mb-10 show-animation ">
+          {props1.subtitle}
+        </p>
+        <Link
+          href="https://pf.kakao.com/_qcQxcK"
+          className="text-lg px-16 py-3 text-black tracking-wider rounded-md bg-white hover:bg-slate-200"
+        >
+          문의하기
+        </Link>
+      </div>
+      <Lottie
+        loop
+        animationData={moonAnimation}
+        play
+        className='float-right w-[500px] h-[500px] mt-[-100px]'
+      />
       {stars.map((star) => (
         <animated.div
           key={star.id}
@@ -75,21 +101,12 @@ const Header = (props1) => {
             animationDuration: `${star.animationDuration}s`,
             transform: props.scale.interpolate((s) => `scale(${s})`),
             opacity: props.opacity,
+            boxShadow: `0 0 ${star.ShadowSize}px rgba(255, 255, 255, 0.9)`,
           }}
         ></animated.div>
       ))}
-      <NavBar />
-      <div className='text-center header-center container-2 mx-auto'>
-        <h1 className='text-4xl font-bold text-white show-animation'>
-          {props1.title.map((line, index) => (
-            <p key={index} className='mb-2'>{line}</p>
-          ))}
-        </h1>
-        <p className='text-lg font-semibold text-[#ddd] mt-1 mb-10 show-animation '>{props1.subtitle}</p>
-        <Link href='https://pf.kakao.com/_qcQxcK' className='text-lg px-16 py-3 text-black tracking-wider rounded-md bg-white hover:bg-slate-200'>문의하기</Link>
-      </div>
     </header>
   );
-}
+};
 
 export default Header;
