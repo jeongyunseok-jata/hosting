@@ -5,8 +5,6 @@ import Link from 'next/link';
 import React, { useEffect } from 'react';
 import { useSpring, animated } from 'react-spring';
 import NavBar from './NavBar';
-import Lottie from 'react-lottie-player'
-import moonAnimation from '../../public/animation/moon2.json'
 
 const Header = (props1) => {
   const [stars, setStars] = React.useState([]);
@@ -82,12 +80,6 @@ const Header = (props1) => {
           문의하기
         </Link>
       </div>
-      <Lottie
-        loop
-        animationData={moonAnimation}
-        play
-        className='float-right w-[500px] h-[500px] mt-[-100px]'
-      />
       {stars.map((star) => (
         <animated.div
           key={star.id}
