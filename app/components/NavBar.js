@@ -23,6 +23,9 @@ const Navbar = () => {
       }
     };
     window.addEventListener('scroll', changeColor);
+    return () => {
+      window.removeEventListener('scroll', changeColor);
+    };
   }, []);
 
   const [isOpen1, setIsOpen1] = useState(false);
@@ -65,7 +68,7 @@ const Navbar = () => {
   return (
     <div
       style={{ backgroundColor: `${color}` }}
-      className='fixed left-0 top-0 w-full z-10 ease-in duration-200 px-4'
+      className='left-0 top-0 w-full z-10 ease-in duration-200 px-4'
     >
       <div className="container mx-auto">
         <div className='max-w-[1536px] m-auto flex justify-between items-center p-1 font-semibold text-white'>
@@ -76,7 +79,7 @@ const Navbar = () => {
           </Link>
           <ul className='hidden px-4 sm:flex'style={{ color: `${textColor}` }}>
             <li
-              className='text-lg pr-4'
+              className='text-lg pr-4 pt-1'
               onMouseEnter={openDropdown1}
               onMouseLeave={closeDropdown1}
             >
@@ -86,6 +89,10 @@ const Navbar = () => {
                 onClick={toggleDropdown1}
               >
                 가격표
+                <svg xmlns="http://www.w3.org/2000/svg" fill='rgb(255,255,255)' viewBox="0 0 512 512" className='mt-1 ml-1 w-4 h-4 float-right'>
+                  <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+                </svg>
+
               </p>
               {isOpen1 && (
                 <div
@@ -108,7 +115,7 @@ const Navbar = () => {
               )}
             </li>
             <li
-              className='text-lg pr-4'
+              className='text-lg pr-4 pt-1'
               onMouseEnter={openDropdown2}
               onMouseLeave={closeDropdown2}
             >
@@ -118,6 +125,9 @@ const Navbar = () => {
                 onClick={toggleDropdown2}
               >
                 약관
+                <svg xmlns="http://www.w3.org/2000/svg" fill='rgb(255,255,255)' viewBox="0 0 512 512" className='mt-1 ml-1 w-4 h-4 float-right'>
+                  <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+                </svg>
               </p>
               {isOpen2 && (
                 <div
@@ -139,11 +149,14 @@ const Navbar = () => {
                 </div>
               )}
             </li>
-            <li className='text-lg pr-4'>
+            <li className='text-lg pr-4 pt-1'>
               <Link href='https://stats.uptimerobot.com/Jj0vRHBrlk'>업타임</Link>
             </li>
-            <li className='text-lg'>
+            <li className='text-lg pr-4 pt-1'>
               <Link href='https://pf.kakao.com/_qcQxcK'>문의하기</Link>
+            </li>
+            <li className='text-lg bg-blue-600 text-white px-5 py-1 rounded-full'>
+              <Link href='https://pf.kakao.com/_qcQxcK'>콘솔</Link>
             </li>
           </ul>
 
@@ -254,8 +267,11 @@ const Navbar = () => {
                 <li className='pb-4 pl-7'>
                   <Link href='https://stats.uptimerobot.com/Jj0vRHBrlk'>업타임</Link>
                 </li>
-                <li className='pl-7'>
+                <li className='pb-4 pl-7'>
                   <Link href='https://pf.kakao.com/_qcQxcK'>문의하기</Link>
+                </li>
+                <li className='pl-7'>
+                  <Link href='https://stats.uptimerobot.com/Jj0vRHBrlk'>콘솔</Link>
                 </li>
               </ul>
             )}
