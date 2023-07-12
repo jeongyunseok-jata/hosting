@@ -33,9 +33,8 @@ export default function Projects({projects}) {
         <>
             <header className="w-full h-[350px] bg-price mb-24">
                 <NavBar />
-                <div className="header-center">
+                <div className="content-center">
                     <div className="text-4xl font-bold text-center text-white">단독서버 가격표</div>
-                    <div className="text-xl font-bold text-center text-white">호스팅 구매시 이용약관 / 주의사항에 동의한 것으로 간주됩니다.</div>
                 </div>
             </header>
             <section className='flex items-center justify-center mb-10 ci-on'>
