@@ -8,9 +8,15 @@ import { useState, useEffect } from 'react';
 import '../app/globals.css'
 import Price from '../app/components/price-card'
 import Header from "@/app/components/header";
+import MainCard from "@/app/components/mainCard";
 import Footer from '../app/components/footer'
 import Contact from '../app/components/Contact';
 import NavBar from '../app/components/NavBar';
+
+import siren from '../public/siren.png'
+import solution from '../public/solution.png'
+import payment from '../public/payment.png'
+import repair from '../public/repair.png'
 
 export const metadata = {
     title: 'First Hosting | 2023',
@@ -33,11 +39,32 @@ export default function Projects({projects}) {
         <>
             <header className="w-full h-[350px] bg-price mb-24">
                 <NavBar />
-                <div className="header-center">
+                <div className="content-center top-1/3 relative">
                     <div className="text-4xl font-bold text-center text-white">가상서버 가격표</div>
-                    <div className="text-xl font-bold text-center text-white">호스팅 구매시 이용약관 / 주의사항에 동의한 것으로 간주됩니다.</div>
                 </div>
             </header>
+            <section className='container mx-auto px-4 mb-20'>
+                <MainCard
+                img={payment}
+                title='합리적인 가격'
+                content='타사대비 합리적인 가격에 만족하실때까지 여러 상품들을 제안 및 컨설팅해드립니다.'
+                />
+                <MainCard
+                img={siren}
+                title='긴급 서비스'
+                content='타사에선 느린 대응을 받고계신가요? 저희 호스팅은 빠른 대응을 위해 평균 30분 이내로 연락드립니다.'
+                />
+                <MainCard
+                img={repair}
+                title='안정적인 Infrastructure'
+                content='First호스팅의 네트워크는 대규모 Cloudflare 망을 통해 보호받으며 anycast 망을 통해 최대 67Tbps의 디도스 완화가 가능합니다.'
+                />
+                <MainCard
+                img={solution}
+                title='기업용 솔루션'
+                content='아직도 사이버 공격 때문에 고민하고 계신가요? First호스팅 에서는 리눅스 기반 자체개발 Ebpf XDP 방화벽으로 윈도우 , 리눅스 , 장비를 보호합니다.'
+                />
+            </section>
             <section className='flex items-center justify-center mb-10 ci-on'>
                 <div className='container mx-auto'>
                     <div className='flex flex-wrap w-full justify-center'>

@@ -104,7 +104,7 @@ const Navbar = () => {
                     <Link href='/price-kh'>
                       <li className="px-5 py-3 text-black hover:bg-gray-300 rounded">가상 서버</li>
                     </Link>
-                    <Link href='/price-kh'>
+                    <Link href='/price-dc'>
                       <li className="px-5 py-3 text-black hover:bg-gray-300 rounded">단독 서버</li>
                     </Link>
                     <Link href='/price-kh'>
@@ -150,7 +150,7 @@ const Navbar = () => {
               )}
             </li>
             <li className='text-lg pr-4 pt-1'>
-              <Link href='https://stats.uptimerobot.com/Jj0vRHBrlk'>업타임</Link>
+              <Link href='https://stats.uptimerobot.com/Jj0vRHBrlk'>문서DB</Link>
             </li>
             <li className='text-lg pr-4 pt-1'>
               <Link href='https://pf.kakao.com/_qcQxcK'>문의하기</Link>
@@ -224,7 +224,7 @@ const Navbar = () => {
                         <Link href='/price-kh'>
                           <li className="pb-4">가상 서버</li>
                         </Link>
-                        <Link href='/price-kh'>
+                        <Link href='/price-dc'>
                           <li className="pb-4">단독 서버</li>
                         </Link>
                         <Link href='/price-kh'>
@@ -265,7 +265,7 @@ const Navbar = () => {
                   )}
                 </li>
                 <li className='pb-4 pl-7'>
-                  <Link href='https://stats.uptimerobot.com/Jj0vRHBrlk'>업타임</Link>
+                  <Link href='https://stats.uptimerobot.com/Jj0vRHBrlk'>문서DB</Link>
                 </li>
                 <li className='pb-4 pl-7'>
                   <Link href='https://pf.kakao.com/_qcQxcK'>문의하기</Link>

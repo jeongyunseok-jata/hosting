@@ -75,7 +75,7 @@ const Header = (props1) => {
         </p>
         <Link
           href="https://pf.kakao.com/_qcQxcK"
-          className="text-lg px-16 py-3 text-black tracking-wider rounded-md bg-white hover:bg-slate-200"
+          className="text-lg px-16 py-4 text-black tracking-wider rounded-md bg-white hover:bg-slate-200"
         >
           문의하기
         </Link>

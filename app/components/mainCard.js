@@ -11,8 +11,8 @@ const price2 = props => (
         <div class="w-full p-6 bg-white border rounded-lg mb-5 duration-150">
             <Image 
                 src={props.img}
-                width={20}
-                height={20}
+                width={500}
+                height={500}
                 className='w-14 h-14 mb-3'
             />
             <div className="text-2xl font-medium mb-3">{props.title}</div>

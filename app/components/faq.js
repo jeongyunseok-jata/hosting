@@ -53,7 +53,7 @@ export default function Home(props) {
                   }}
                 >
                   <div className="px-6">
-                    <p className='text-md xl:text-lg font-semibold text-gray-600 pb-6'>window server 2019을 기본 제공합니다. 기본 제공되는 운영체제 외에 window server 2019, centos, ubuntu, debian도 지원합니다.</p>
+                    <p className='text-md xl:text-lg font-semibold text-gray-600 pb-6'>Windows Server 2019 Standard 를 기본제공합니다.</p>
                   </div>
                 </div>
               </li>
@@ -89,7 +89,7 @@ export default function Home(props) {
                   }}
                 >
                   <div className="px-6">
-                    <p className='text-md xl:text-lg font-semibold text-gray-600 pb-6'>원격 포트와 서비스 포트 2개 와 서비스용 디도스 방어 프록시를 이용한 포트 한개를 제공합니다.</p>
+                    <p className='text-md xl:text-lg font-semibold text-gray-600 pb-6'>가상서버 - 공유IP ( 원격포트 , 게임용 포트 ) / 단독서버 - 공인IP 모든포트 사용 가능합니다.</p>
                   </div>
                 </div>
               </li>

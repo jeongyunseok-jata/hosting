@@ -21,7 +21,6 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Header
           title={['강력한 방어 인프라를 제공하는', '보안존 IDC를 제공합니다.']}
-          subtitle='365일 24시간 상담제공, 기다리지마세요! '
         />
         {children}
         <Footer/>

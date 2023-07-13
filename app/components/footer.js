@@ -8,8 +8,8 @@ export default function footer() {
             <div className="flex flex-wrap w-full text-[#545c66]">
                 <div className="w-full sm:w-1/4 mb-10 sm:mb-0">
                     <div className="text-xl font-semibold mb-3 border-b-2 border-[#2272eb] w-1/6 pb-2 text-[#000]">Company</div>
-                    <div className="mb-1">대표:한관웅</div>
-                    <div className="hover:ml-[-6px] duration-300 hover:text-[#3182f6] hover:underline"><Link href='https://moneypin.biz/bizno/detail/2461301852/'>사업자 번호:246-13-01852</Link></div>
+                    <div className="mb-1">대표 : 한관웅</div>
+                    <div className="hover:ml-[-6px] duration-300 hover:text-[#3182f6] hover:underline"><Link href='https://www.hometax.go.kr/websquare/websquare.wq?w2xPath=/ui/pp/index_pp.xml&tmIdx=1'>사업자 번호 : 246-13-01852</Link></div>
                 </div>
                 <div className="w-full sm:w-1/4 mb-10 sm:mb-0">
                     <div className="text-xl font-semibold mb-3 border-b-2 border-[#2272eb] w-1/6 pb-2 text-[#000]">Docs</div>
