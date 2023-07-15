@@ -196,7 +196,7 @@ const Navbar = () => {
           <div
             className={
               nav
-                ? 'sm:hidden absolute top-0 left-0 right-0 bottom-0 w-2/4 h-screen bg-menu transition-all duration-300 transform translate-x-0'
+                ? 'sm:hidden absolute top-0 left-0 right-0 bottom-0 w-2/4 h-screen bg-menu transition-all duration-300 transform translate-x-0 z-999'
                 : 'sm:hidden absolute top-0 left-[-100%] right-0 bottom-0'
             }
           >
